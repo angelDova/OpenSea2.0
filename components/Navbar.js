@@ -11,7 +11,7 @@ import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between p-5 items-center">
+    <div className="fixed top-0 flex justify-between p-5 items-center lg:px-10 bg-white/90 z-40 w-full ">
       {/* Left */}
       <div className="flex items-center mr-9 shrink-0">
         <div className="mr-2">
@@ -38,12 +38,20 @@ const Navbar = () => {
       </div>
 
       {/* Right */}
-      <div className="flex space-x-[1.25rem] lg:space-x-[1.75rem] ml-8">
-        <BiUserCircle className="w-[2.2rem] h-[2.2rem] hidden lg:flex" />
-        <MdOutlineAccountBalanceWallet className="w-[2.2rem] h-[2.2rem] hidden lg:flex" />
-        <GrSearch className="w-[2.1rem] h-[2.1rem] sm:hidden" />
-        <MdOutlineShoppingCart className="w-[2.2rem] h-[2.2rem]" />
-        <FiMenu className="w-[2rem] h-[2rem]" />
+      <div className="xl:flex">
+        <div className="hidden xl:inline-flex space-x-6 ml-12">
+          <button className="font-semibold">Explore</button>
+          <button className="font-semibold">Stats</button>
+          <button className="font-semibold">Resources</button>
+          <button className="font-semibold">Create</button>
+        </div>
+        <div className="flex space-x-[1.25rem] lg:space-x-[1.75rem] ml-12 lg:ml-8">
+          <BiUserCircle className="w-[2.2rem] h-[2.2rem] hidden lg:flex" />
+          <MdOutlineAccountBalanceWallet className="w-[2.2rem] h-[2.2rem] hidden lg:flex" />
+          <GrSearch className="w-[2.1rem] h-[2.1rem] sm:hidden" />
+          <MdOutlineShoppingCart className="w-[2.2rem] h-[2.2rem]" />
+          <FiMenu className="w-[2rem] h-[2rem]" />
+        </div>
       </div>
     </div>
   );

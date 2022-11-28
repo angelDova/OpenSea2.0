@@ -7,9 +7,11 @@ const CollectionCard = ({ rank, image, title, price }) => {
     <div className="flex space-x-4 items-center justify-between">
       <div className="flex items-center space-x-4">
         <p className="font-bold text-gray-400">{rank}</p>
-        <Image src={image} className="w-14 h-14 rounded-[1rem]" alt="" />
+        <div className="flex">
+          <Image src={image} className="w-14 h-14 rounded-[1rem]" alt="" />
+        </div>
         <div className="">
-          <div className="flex place-items-center">
+          <div className="flex items-center object-cover">
             <p className="font-semibold">{title}</p>
             <div className="">
               <Image src={verified} alt="" className="flex w-8" />

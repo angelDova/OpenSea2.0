@@ -3,8 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Collections from "../components/Collection";
 import Explore from "../components/Explore";
+import Spotlight from "../components/Spotlight";
 import Navbar from "../components/Navbar";
+import Notables from "../components/Notables";
 import Trending from "../components/Trending";
+import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -32,8 +35,11 @@ export default function Home() {
 
       {/* Trending */}
       <Trending />
-      {/* Notable Collections */}
       <Collections />
+      {/* Notable Collections */}
+      <Notables />
+      <Spotlight />
+      <Footer />
     </div>
   );
 }
